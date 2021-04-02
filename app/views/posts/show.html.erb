@@ -1,0 +1,17 @@
+<h1>Post</h1>
+
+<%= render @post %>
+
+<p>
+  Click here to update the post and re-render it with a Turbo Stream action. Notice the <strong>incorrect</strong> image URL.
+</p>
+
+<%= form_with model: @post do |f| %>
+  <%= f.submit %>
+<% end %>
+
+<p>
+  Reload the page to render the the post through a controller action. Notice the <strong>correct</strong> image URL.
+</p>
+
+<%= turbo_stream_from @post %>
