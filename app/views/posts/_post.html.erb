@@ -1,3 +1,18 @@
 <%= tag.div id: dom_id(post) do %>
   <%= post.content %>
+
+  <br>
+  <hr>
+  <br>
+
+  The current <code>ActionText::Content.renderer</code> is:<br>
+  <%= renderer = ActionText::Content.renderer || 'nil' %><br>
+
+  <br>
+  <hr>
+  <br>
+
+  <code>ActionText::Content.default_renderer</code> is:<br>
+  <%= default_renderer = ActionText::Content.default_renderer || 'nil' %>
+  <br>
 <% end %>
